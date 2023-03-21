@@ -28,3 +28,13 @@ Scenario: AC2   "Wrong login/password" message should be displayed for invalid c
       And user enter valid user name
       And user enter valid password
       And user should see the password in bullet signs
+
+      Scenario: AC5- Verify if the ‘Enter’ key of the keyboard is working correctly on the login page.
+        Given User  navigate to log in page
+
+        When user enter valid user name
+        And  user enter valid password
+        Then user click ENTER key
+
+
+

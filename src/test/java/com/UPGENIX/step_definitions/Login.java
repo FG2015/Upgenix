@@ -8,6 +8,7 @@ import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.Keys;
 
 
 public class Login {
@@ -65,6 +66,14 @@ public class Login {
                Boolean isBullet= loginPage.passwordBox.getAttribute("id").equals("password");
                 Assert.assertEquals(isBullet,true);
         }
+        @Then("user click ENTER key")
+        public void user_click_enter_key() {
+                loginPage.passwordBox.sendKeys(Keys.ENTER);
+                String title = Driver.getDriver().getTitle();
+                Assert.assertEquals(title,"Odoo" );
+
+        }
+
 
 
 
