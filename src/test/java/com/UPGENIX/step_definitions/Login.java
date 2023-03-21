@@ -59,6 +59,10 @@ public class Login {
         }
         @Then("user see {string} message on the page")
         public void user_see_message_on_the_page(String string) {
+                String ExpectedResult="Please Fill out this field";
+                boolean actualResult = loginPage.passwordBox.isEnabled();
+                Assert.assertTrue(ExpectedResult, actualResult);
+
 
         }
         @When("user should see the password in bullet signs")
