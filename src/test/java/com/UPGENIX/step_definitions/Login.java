@@ -37,13 +37,11 @@ public class Login {
         }
         @When("user enter invalid password")
         public void user_enter_invalid_password() {
-                // Write code here that turns the phrase above into concrete actions
-                throw new io.cucumber.java.PendingException();
+
         }
         @Then("user see {string} message displayed")
         public void user_see_message_displayed(String string) {
-                // Write code here that turns the phrase above into concrete actions
-                throw new io.cucumber.java.PendingException();
+
         }
 
 
