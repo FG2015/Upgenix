@@ -3,10 +3,11 @@ package com.UPGENIX.step_definitions;
 import com.UPGENIX.pages.LoginPage;
 import com.UPGENIX.utilities.Configuration_Reader;
 import com.UPGENIX.utilities.Driver;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
-
+import org.junit.Assert;
 
 
 public class Login {
@@ -46,6 +47,26 @@ public class Login {
                 String actualResult=loginPage.WrongLoginOrPassword.getText();
 
         }
+        @And("user is back on the login page")
+        public void userIsBackOnTheLoginPage() {
+                Driver.getDriver().get(" https://qa.upgenix.net/web/login");
+        }
+        @When("user leave  password box empty")
+        public void user_leave_password_box_empty() {
+                loginPage.passwordBox.sendKeys(" ");
+
+        }
+        @Then("user see {string} message on the page")
+        public void user_see_message_on_the_page(String string) {
+
+        }
+        @When("user should see the password in bullet signs")
+        public void user_should_see_the_password_in_bullet_signs() {
+               Boolean isBullet= loginPage.passwordBox.getAttribute("id").equals("password");
+                Assert.assertEquals(isBullet,true);
+        }
+
+
 
 
 
