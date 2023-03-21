@@ -19,6 +19,9 @@ public class LoginPage {
     @FindBy(css = "button[type='submit']")
     public WebElement loginButton;
 
+    @FindBy(css = "p[class='alert alert-danger']")
+    public WebElement WrongLoginOrPassword;
+
 
 
 

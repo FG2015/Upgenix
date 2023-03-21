@@ -37,10 +37,13 @@ public class Login {
         }
         @When("user enter invalid password")
         public void user_enter_invalid_password() {
+                loginPage.passwordBox.sendKeys("posma123");
 
         }
         @Then("user see {string} message displayed")
         public void user_see_message_displayed(String string) {
+                String expectedResult = "Wrong login/password";
+                String actualResult=loginPage.WrongLoginOrPassword.getText();
 
         }
 
