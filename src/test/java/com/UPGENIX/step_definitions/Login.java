@@ -4,6 +4,7 @@ import com.UPGENIX.pages.LoginPage;
 import com.UPGENIX.utilities.Configuration_Reader;
 import com.UPGENIX.utilities.Driver;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
 
@@ -33,12 +34,21 @@ public class Login {
                 loginPage.loginButton.click();
 
 
-
-
+        }
+        @When("user enter invalid password")
+        public void user_enter_invalid_password() {
+                // Write code here that turns the phrase above into concrete actions
+                throw new io.cucumber.java.PendingException();
+        }
+        @Then("user see {string} message displayed")
+        public void user_see_message_displayed(String string) {
+                // Write code here that turns the phrase above into concrete actions
+                throw new io.cucumber.java.PendingException();
         }
 
 
-    }
+
+}
 
 
 
