@@ -47,5 +47,16 @@ public class Logout {
 
 
     }
+  @When("user click step back button")
+  public void user_click_step_back_button() {
+    Driver.getDriver().navigate().back();
+    Driver.getDriver().navigate().forward();
+  }
+
+  @Then("user still on login page")
+  public void user_still_on_login_page() {
+    String actualResult=Driver.getDriver().getTitle();
+    Assert.assertEquals("Login | Best solution for startups",actualResult);
+  }
 
 }
