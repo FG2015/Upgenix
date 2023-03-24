@@ -22,12 +22,12 @@ public class Login {
         }
         @When("user enter valid user name")
         public void user_enter_valid_user_name() {
-                loginPage.usernameBox.sendKeys("posmanager10@info.com");
+                loginPage.usernameBox.sendKeys("salesmanager15@info.com");
 
         }
         @When("user enter valid password")
         public void user_enter_valid_password() throws InterruptedException {
-                loginPage.passwordBox.sendKeys("posmanager");
+                loginPage.passwordBox.sendKeys("salesmanager");
                 Thread.sleep(4000);
 
         }
