@@ -14,7 +14,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/UPGENIX/step_definitions",
         dryRun = false,
-        tags = "@Re"
+        tags = "@UPGNX10-299 or @Farid"
 
         //tags = "@UPGNX10-276 or @UPGNX10-290 or @UPGNX10-292 or @UPGNX10-294 or @UPGNX10-297"
 

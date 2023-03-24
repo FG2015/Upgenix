@@ -1,4 +1,4 @@
-@Re
+@UPGNX10-299
 Feature: Logout Functionality
 
   Scenario: AC1- User can log out and ends up in login page.
