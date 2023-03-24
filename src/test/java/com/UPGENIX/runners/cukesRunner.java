@@ -8,10 +8,13 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
 
 
+        plugin = {"html:target/cucumber-report.html",
+                "json:target/cucumber.json"
+        },
         features = "src/test/resources/features",
         glue = "com/UPGENIX/step_definitions",
         dryRun = false,
-        tags="all"
+        tags = "@UPGNX10-276 or @UPGNX10-290 or @UPGNX10-292 or @UPGNX10-294 or @UPGNX10-297"
 
 )
 public class cukesRunner {
